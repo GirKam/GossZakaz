@@ -29,21 +29,22 @@ header {
   height: 48px;
 }
 
-nav {
+ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
 }
-nav a {
+ul li {
   font-weight: 200;
   color: #2f2222;
   text-decoration: none;
   font-size: 18px;
+  list-style-type: none;
 }
 
-nav a:hover,
-.nav a:hover {
+ul li:hover,
+.ul li:hover {
   color: #5d71dd;
   text-decoration: underline;
 }
@@ -183,16 +184,16 @@ input {
 }
 
 /* Две карточки */
-.info_cart_right {
+.info_cart {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
 }
-.info_cart_right .info {
+.info_cart .info {
   width: 680px;
   height: 400px;
 }
-.info_cart_right .info .text_cart {
+.info_cart .info .text_cart {
   width: 600px;
 }
 
@@ -362,11 +363,12 @@ footer {
 /*  */
 /*  */
 /*  */
+
 @media (max-width: 1030px) {
   /* Header начало */
   .responsive-image {
     background-image: url('img/header_img_1024.svg');
-    height: 250px; /* Изображение для разрешения 1024 */
+    height: 250px;
   }
   header {
     display: flex;
@@ -381,13 +383,13 @@ footer {
     height: 40px;
   }
 
-  nav {
+  ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
   }
-  nav a {
+  ul li {
     font-weight: 200;
     color: #2f2222;
     text-decoration: none;
@@ -444,14 +446,14 @@ footer {
     width: 620px;
   }
 
-  .info_cart_right .info {
+  .info_cart .info {
     width: 620px;
     height: 400px;
   }
-  .info_cart_right .info .text_cart {
+  .info_cart .info .text_cart {
     width: 540px;
   }
-  .info_cart_right {
+  .info_cart {
     width: 940px;
   }
   /* Правая часть новостная колонка */
@@ -485,7 +487,6 @@ footer {
   }
   .subcribe_news {
     width: 100%;
-    /* height: 270px; */
     background-color: white;
     border-radius: 20px;
     display: flex;
@@ -508,5 +509,136 @@ footer {
   }
   .button_input input {
     width: 380px;
+  }
+}
+
+@media (max-width: 320px) {
+  header ul {
+    display: none;
+  }
+  header {
+    width: 300px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dateCart {
+    font-size: 12px;
+  }
+  .text_category_cart {
+    font-size: 10px;
+  }
+  .text_cart {
+    width: 260px;
+    font-size: 15px;
+  }
+  .left-section,
+  .right-section {
+    padding: 0px;
+  }
+  /* cart1 */
+  .info {
+    width: 280px;
+    height: 350px;
+    padding: 15px;
+  }
+
+  /*  */
+  .info_cart .info .text_cart {
+    width: 260px;
+  }
+  main {
+    padding: 0;
+    padding: 15px 10px;
+  }
+  .up_title,
+  .down_title {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 290px;
+  }
+  .info_cart {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+  }
+  .info_cart .info {
+    width: 280px;
+    height: 350px;
+  }
+  .cart_right {
+    width: 280px;
+    height: 350px;
+  }
+  .cart {
+    height: 350px;
+    width: 280px;
+  }
+  .news-popular {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .responsive-image {
+    background-image: url('img/header_img_320.svg');
+    height: 150px;
+    width: 100%;
+  }
+  .page_navigation {
+    display: none;
+  }
+  /*блок подписки */
+  .subcribe_news {
+    width: 320px;
+    height: 270px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+  }
+  .button_input {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .button_input input {
+    width: 260px;
+  }
+  /* .subcribe_news p {
+    font-size: 24px;
+  }
+  .subcribe_news button,
+  input {
+    padding: 13px 68px;
+    border-radius: 20px;
+    width: 260px;
+  }
+  .subcribe_news button {
+    display: flex;
+    gap: 10px;
+    background-color: #5d71dd;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+  } */
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #5d71dd0d;
+    height: 273px;
+    gap: 40px;
   }
 }
