@@ -1,3 +1,7 @@
+document.getElementById('burger').addEventListener('click', function () {
+  document.querySelector('header').classList.toggle('open');
+});
+
 const headAndRightSection = () => {
   let tl = gsap.timeline();
   tl.from('header .logo img, header ul li, header .phone', {
